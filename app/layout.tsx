@@ -7,15 +7,18 @@ import Footer from "@/components/footer";
 import Nav from "@/components/nav";
 import { Analytics } from "@vercel/analytics/react";
 import { config } from "@/lib/config"; // Import config
+import ogImage from "./opengraph-image.png";
 
 export const metadata: Metadata = {
   title: config.metadata.title,
   description: config.metadata.description,
-  metadataBase: new URL(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`),
+  metadataBase: new URL(`https://www.sabiehahmed.com`),
   openGraph: {
     images: [
       {
-        url: config.metadata.ogImage, 
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height, 
       },
     ],
   },
