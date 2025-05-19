@@ -5,7 +5,6 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Footer from "@/components/footer";
 import Nav from "@/components/nav";
-import { Analytics } from "@vercel/analytics/react";
 import { config } from "@/lib/config"; // Import config
 import ogImage from "./opengraph-image.png";
 import { GoogleTagManager } from '@next/third-parties/google'
@@ -42,7 +41,6 @@ export default async function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   );
