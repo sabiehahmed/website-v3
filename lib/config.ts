@@ -176,7 +176,7 @@ export const config: Config = {
         riveStateMachine: "3",
         keywords: ["engineering", "design"],
         descriptionParts: [
-          { type: "text", content: "I build products solo, from 0 to 1. " },
+          { type: "text", content: "I build products and experiences, I work closely with cross functional teams, " },
           { type: "span", content: "Hands-on experience", className: "whitespace-nowrap" },
           { type: "text", content: " is an understatement. " },
           { type: "break" },
