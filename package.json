@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.3.2",
     "@radix-ui/react-popover": "^1.0.7",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@rive-app/react-canvas": "^4.8.4",

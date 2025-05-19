@@ -8,6 +8,7 @@ import Nav from "@/components/nav";
 import { Analytics } from "@vercel/analytics/react";
 import { config } from "@/lib/config"; // Import config
 import ogImage from "./opengraph-image.png";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: config.metadata.title,
@@ -32,6 +33,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
+      <GoogleTagManager gtmId="G-SKRM16PJPS"/>
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} relative font-sans bg-whiteout selection:text-white  selection:bg-pink-400 dark:bg-zinc-900 text-blackout dark:text-zinc-100`}
       >
