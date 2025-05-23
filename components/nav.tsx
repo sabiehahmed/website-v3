@@ -41,7 +41,6 @@ const Nav = () => {
                 <Image
                     priority
                     src={config.nav.logoPath}
-                    fill
                     sizes="64px"
                     alt={config.nav.logoAlt}
                 />
