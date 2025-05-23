@@ -112,3 +112,12 @@ export  type DescriptionPart = TextPart | SpanPart | BreakPart | LinkPart;
       lastUpdate: string;
     };
   }
+
+export interface BlogPostMetadata {
+  slug: string;
+  title: string;
+  date: string; // e.g., "YYYY-MM-DD"
+  featureImage: string; // URL or path to the image
+  excerpt: string;
+  author?: string; // Optional
+}
