@@ -32,7 +32,7 @@ test.describe('Landing Page E2E Tests', () => {
 
     // Check for the presence of a Rive animation canvas element
     // This selector might need to be more specific if there are multiple canvases
-    await expect(page.locator('canvas').first()).toBeVisible();
+    await expect(page.locator('.transition-all').first()).toBeVisible();
   });
 
   test('Test 2: Scroll-based Animations and Content Changes', async ({ page }) => {
