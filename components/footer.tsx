@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { config } from "../lib/config";
 import React from "react";
 

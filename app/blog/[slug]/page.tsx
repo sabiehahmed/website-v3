@@ -1,4 +1,4 @@
-import Image from 'next/image'; // Using Next/Image for feature image
+import Image from "next/legacy/image"; // Using Next/Image for feature image
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { getPostData, getAllPostSlugs } from '@/lib/blog';
