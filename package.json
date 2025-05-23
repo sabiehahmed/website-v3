@@ -23,6 +23,7 @@
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.20",
     "geist": "^1.2.2",
+    "gray-matter": "^4.0.3",
     "ical": "^0.8.0",
     "lucide-react": "^0.363.0",
     "moment-timezone": "^0.5.45",
@@ -30,6 +31,8 @@
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
     "sharp": "^0.34.1",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7"

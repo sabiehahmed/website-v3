@@ -45,13 +45,23 @@ const Nav = () => {
           alt={config.nav.logoAlt}
         />
       </Link>
-      <Popover>
-        <PopoverTrigger
-          className={`pointer-events-auto underline underline-offset-[3px] opacity-100  decoration-[1.5px] decoration-blackout/50 dark:decoration-whiteout/50 md:mr-10 font-medium`}
-        >
-          {config.contact.displayTexts.contact}
-        </PopoverTrigger>
-        <PopoverContent>
+      <div className="flex items-center gap-4 md:mr-10">
+        {config.nav.links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="pointer-events-auto underline underline-offset-[3px] opacity-100 decoration-[1.5px] decoration-blackout/50 dark:decoration-whiteout/50 font-medium"
+          >
+            {link.text}
+          </Link>
+        ))}
+        <Popover>
+          <PopoverTrigger
+            className={`pointer-events-auto underline underline-offset-[3px] opacity-100  decoration-[1.5px] decoration-blackout/50 dark:decoration-whiteout/50 font-medium`}
+          >
+            {config.contact.displayTexts.contact}
+          </PopoverTrigger>
+          <PopoverContent>
           <ul className="flex pointer-events-auto font-medium flex-col gap-4 font-base">
             <li>
               <Link href={config.contact.email}>{config.contact.displayTexts.email}</Link>

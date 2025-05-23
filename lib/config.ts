@@ -60,10 +60,12 @@ interface Config {
     title: string;
     description: string;
     ogImage: string;
+    metadataBase: string; // Added for base URL
   };
   nav: {
     logoPath: string;
     logoAlt: string;
+    links: Array<{ text: string; href: string }>;
   };
   common: {
     timezone: string;
@@ -133,10 +135,12 @@ export const config: Config = {
     title: "Sabieh Ahmed",
     description: "Digital Craftsman",
     ogImage: "/opengraph-image.png",
+    metadataBase: "https://example.com", // Placeholder URL
   },
   nav: {
     logoPath: "/logo-anim.gif",
     logoAlt: "spinning head animation",
+    links: [{ text: "Blog", href: "/blog" }],
   },
   common: {
     timezone: "Europe/Berlin",
