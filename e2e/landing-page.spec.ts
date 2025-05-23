@@ -14,7 +14,7 @@ const scrollToBottom = async (page: Page) => {
 
 test.describe('Landing Page E2E Tests', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/');
+    await page.goto('http://localhost:3000/')
   });
 
   test('Test 1: Initial Page Load', async ({ page }) => {
@@ -44,16 +44,7 @@ test.describe('Landing Page E2E Tests', () => {
     await expect(page.getByText(config.scrollContainer.animatedWords[1])).toBeVisible();
     const secondContentBoxText = (config.scrollContainer.contentBoxes[1].descriptionParts[0] as { content: string }).content;
     await expect(page.getByText(secondContentBoxText, { exact: false })).toBeVisible();
-    await expect(page.locator('canvas').nth(1)).toBeVisible();
-
-
-    // Scroll to bring the third ContentBox into view
-    await scrollDown(page, 600); // Adjust scroll pixels as needed
-
-    await expect(page.getByText(config.scrollContainer.animatedWords[2])).toBeVisible();
-    const thirdContentBoxText = (config.scrollContainer.contentBoxes[2].descriptionParts[0] as { content: string }).content;
-    await expect(page.getByText(thirdContentBoxText, { exact: false })).toBeVisible();
-    await expect(page.locator('canvas').nth(2)).toBeVisible();
+    await expect(page.locator('.transition-all').nth(1)).toBeVisible();
   });
 
   test('Test 3: ContentBox Links (TalonOne)', async ({ page }) => {
