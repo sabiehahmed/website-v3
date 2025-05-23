@@ -1,7 +1,7 @@
 ---
 title: "Jules: The AI Pair Programmer"
 date: "2024-07-15"
-featureImage: "/images/blog/jules-banner.png"
+featureImage: "/images/blog/jules.png"
 excerpt: "An introduction to Jules, an AI assistant revolutionizing software development."
 author: "AI Insights Team"
 ---

@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import {Button} from "@/components/ui/button";
+import {CheckCheckIcon, LinkIcon} from "lucide-react";
 
 interface CopyLinkButtonProps {
   url: string;
@@ -29,17 +31,10 @@ const CopyLinkButton: React.FC<CopyLinkButtonProps> = ({ url }) => {
   }, [copied]);
 
   return (
-    <button
-      onClick={handleCopy}
-      className={`font-semibold py-2 px-4 rounded-lg transition-colors duration-150 ease-in-out ${
-        copied
-          ? "bg-green-500 hover:bg-green-600 text-white"
-          : "bg-gray-500 hover:bg-gray-600 text-white"
-      }`}
-      disabled={copied}
-    >
-      {copied ? "Copied!" : "Copy Link"}
-    </button>
+
+      <Button variant="outline" aria-label="Copy Link" size="icon" onClick={handleCopy} disabled={copied} className={`${copied && 'bg-green-500'}`}>
+        {copied ? (<CheckCheckIcon size={16} aria-hidden="true"/>) : (<LinkIcon size={16} aria-hidden="true"/>)}
+      </Button>
   );
 };
 

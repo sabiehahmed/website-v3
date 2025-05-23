@@ -1,43 +1,67 @@
 import Link from 'next/link';
-import Image from 'next/image'; // Import Image for potential future use, but will use <img> for now as per instructions
 // Removed BlogPostMetadata import as it's inferred from getSortedPostsData
-import { getSortedPostsData } from '@/lib/blog'; // Import the new function
+import {getSortedPostsData} from '@/lib/blog';
+import {TypewriterEffectSmooth} from "@/components/ui/typewriter-effect";
+import {PinContainer} from "@/components/ui/3d-pin";
 
+const words = [
+    {
+        text: "I",
+    },
+    {
+        text: "am",
+    },
+    {
+        text: "still",
+    },
+    {
+        text: "Writing",
+        className: "text-blue-500 dark:text-blue-500",
+    },
+    {
+        text: "stuff.",
+    },
+];
 const BlogPage = () => {
-  const posts = getSortedPostsData(); // Fetch actual blog post data
-
-  return (
-    <div className="max-w-4xl mx-auto p-4 md:p-8">
-      <h1 className="text-4xl font-bold mb-8 text-center">Blog</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {posts.map((post) => (
-          <Link key={post.slug} href={`/blog/${post.slug}`} passHref legacyBehavior>
-            <a className="block bg-white dark:bg-zinc-800 shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 duration-300 ease-in-out border border-gray-200 dark:border-zinc-700 flex flex-col min-h-[380px] group">
-              <div className="relative w-full h-48">
-                <Image
-                  src={post.featureImage || "/images/placeholder-image.png"} // Fallback image
-                  alt={post.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-opacity duration-300 group-hover:opacity-90"
-                />
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h2 className="text-2xl font-semibold mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">{post.title}</h2>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                  {post.author && `By ${post.author} - `}{new Date(post.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}
-                </p>
-                <p className="text-gray-700 dark:text-gray-300 flex-grow text-base leading-relaxed">{post.excerpt}</p>
-                <span className="mt-4 text-sm font-medium text-blue-600 dark:text-blue-400 group-hover:underline">
-                  Read more &rarr;
-                </span>
-              </div>
-            </a>
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
+    const posts = getSortedPostsData(); // Fetch actual blog post data
+    if (!posts.length) {
+        return (
+            <div className="max-w-4xl mx-auto p-4 md:p-8 mt-[100px]">
+                <TypewriterEffectSmooth className={'justify-center items-center text-center'} words={words}/>
+            </div>
+        )
+    }
+    return (
+        <div className="max-w-4xl mx-auto p-4 md:p-8 mt-[100px]">
+            <h1 className="text-4xl font-bold mb-8 text-left top-[-40px]">Blogs</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+                {posts.map((post) => (
+                    <Link key={post.slug} href={`/blog/${post.slug}`} passHref legacyBehavior>
+                        <PinContainer
+                            title={post.title}
+                            href={`/blog/${post.slug}`}
+                        >
+                            <div
+                                className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+                                <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+                                    {post.title}
+                                </h3>
+                                <div className="text-base !m-0 !p-0 font-normal">
+                                <span className="text-slate-500 ">
+                                 {post.excerpt}
+                                </span>
+                                </div>
+                                <div
+                                    style={{backgroundImage: `url(${post.featureImage || '/images/placeholder-image.png'})`}}
+                                    className="flex flex-1 w-full rounded-lg mt-4 bg-cover bg-center bg-no-repeat">
+                                </div>
+                            </div>
+                        </PinContainer>
+                    </Link>
+                ))}
+            </div>
+        </div>
+    );
 };
 
 export default BlogPage;

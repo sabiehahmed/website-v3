@@ -30,7 +30,7 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
   const postUrl = `${config.metadata.metadataBase}/blog/${post.slug}`;
 
   return (
-    <article className="max-w-3xl mx-auto p-4 md:p-8">
+    <article className="max-w-3xl mx-auto p-4 md:p-8 mt-[100px]">
       <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center leading-tight">{post.title}</h1>
       <div className="text-center text-gray-500 dark:text-gray-400 mb-8 text-sm">
         {post.author && <span>By {post.author} | </span>}
@@ -41,8 +41,7 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
           src={post.featureImage || "/images/placeholder-image.png"} // Fallback image
           alt={post.title}
           layout="fill"
-          objectFit="cover"
-          priority 
+          priority
         />
       </div>
       
@@ -50,12 +49,10 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
       <div className="bg-white dark:bg-zinc-800 p-6 md:p-8 rounded-lg shadow-md markdown-content">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
       </div>
-
       <div className="mt-10 pt-8 border-t border-gray-200 dark:border-zinc-700 flex flex-col items-center gap-6">
-        <p className="text-lg font-semibold text-gray-700 dark:text-gray-300">Share this post:</p>
         <div className="flex flex-row flex-wrap justify-center items-center gap-3">
           <SocialShareButtons title={post.title} url={postUrl} />
-          <CopyLinkButton url={postUrl} />
+            <CopyLinkButton url={postUrl} />
         </div>
       </div>
     </article>
