@@ -42,6 +42,9 @@ const Nav = () => {
                     priority
                     src={config.nav.logoPath}
                     sizes="64px"
+                    width="64"
+                    height="64"
+                    className="rounded-full"
                     alt={config.nav.logoAlt}
                 />
             </Link>

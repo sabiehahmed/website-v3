@@ -135,7 +135,7 @@ export const config: Config = {
     title: "Sabieh Ahmed",
     description: "Digital Craftsman",
     ogImage: "/opengraph-image.png",
-    metadataBase: "https://example.com", // Placeholder URL
+    metadataBase: "https://sabiehahmed.com",
   },
   nav: {
     logoPath: "/logo-anim.gif",
