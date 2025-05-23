@@ -35,13 +35,13 @@ const SocialShareButtons: React.FC<SocialShareButtonsProps> = ({title, url}) => 
     return (
         <>
             <div className="inline-flex flex-wrap gap-2">
-                <Button variant="outline" aria-label="Share to Facebook" size="icon" onClick={() => window.open(shareLinks[0].url, "_blank")}>
+                <Button variant="outline" aria-label="Share to Facebook" size="icon" onClick={() => window.open(shareLinks[2].url, "_blank")}>
                     <RiFacebookFill size={16} aria-hidden="true"/>
                 </Button>
-                <Button variant="outline" aria-label="Share to X" size="icon" onClick={() => window.open(shareLinks[1].url, "_blank")}>
+                <Button variant="outline" aria-label="Share to X" size="icon" onClick={() => window.open(shareLinks[0].url, "_blank")}>
                     <RiTwitterXFill size={16} aria-hidden="true"/>
                 </Button>
-                <Button variant="outline" aria-label="Share to LinkedIn" size="icon" onClick={() => window.open(shareLinks[2].url, "_blank")}>
+                <Button variant="outline" aria-label="Share to LinkedIn" size="icon" onClick={() => window.open(shareLinks[1].url, "_blank")}>
                     <RiLinkedinFill size={16} aria-hidden="true"/>
                 </Button>
             </div>

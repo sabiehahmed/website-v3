@@ -5,12 +5,53 @@ import { getPostData, getAllPostSlugs } from '@/lib/blog';
 import { config } from '@/lib/config'; // Import config
 import SocialShareButtons from '@/components/social-share-buttons'; // Import new component
 import CopyLinkButton from '@/components/copy-link-button'; // Import new component
+import type { Metadata } from 'next';
 
 // BlogPostMetadata is implicitly typed by getPostData, so direct import might not be needed unless used elsewhere
 
 export async function generateStaticParams() {
   const paths = getAllPostSlugs();
   return paths;
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const post = await getPostData(params.slug);
+
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+      description: 'The requested blog post could not be found.',
+    };
+  }
+
+  // Use post data for SEO metadata
+  const postUrl = `${config.metadata.metadataBase}/blog/${post.slug}`;
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    metadataBase: new URL(config.metadata.metadataBase),
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: 'article',
+      publishedTime: post.date,
+      authors: post.author ? [post.author] : undefined,
+      url: postUrl,
+      images: [
+        {
+          url: post.featureImage || "/images/placeholder-image.png",
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [post.featureImage || "/images/placeholder-image.png"],
+    },
+  };
 }
 
 interface BlogPostPageProps {
@@ -44,7 +85,7 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
           priority
         />
       </div>
-      
+
       {/* Removed prose-lg for more granular control if needed, relying on .markdown-content from globals.css */}
       <div className="bg-white dark:bg-zinc-800 p-6 md:p-8 rounded-lg shadow-md markdown-content">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
