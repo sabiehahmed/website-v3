@@ -10,130 +10,177 @@ author: "Sabieh Ahmed"
 
 **It took me 8+ years to realize what I'll tell you in 8 minutes**
 
-So I've been coding since 2016, and I wish someone had told me these 7 things before I wasted years figuring them out the hard way. If you're stuck, overwhelmed, or doubting yourself, let me save you 10+ years.
+So I've been coding since 2016, and I wish someone had told me these 7 things before I wasted years figuring them out the hard way. If you're stuck, overwhelmed, or doubting yourself, let me save you some serious headaches.
 
 My name is Sabieh, and I've been a professional software engineer for more than 8 years. I've helped beginner developers learn how to code properly and land a job in tech.
 
----
-
-## 1. 🧠 You Don't Need to Know Everything
+## 1. You Don't Need to Know Everything
 
 Here's the first thing I wish someone had told me: **You don't need to know everything. Not even close.**
 
-When I started out, I thought real developers had all of JavaScript memorized, as if they were just born with it. I used to think real developers could wake up, grab their keyboard from under their pillow, and instantly write perfect JavaScript, like they had the entire language stored in their brain.
+When I started out, I thought real developers had all of JavaScript memorized, as if they were just born with it. I pictured them waking up, grabbing their laptop, and instantly writing perfect code like they had the entire MDN documentation tattooed on their brain.
 
-Spoiler: they don't. Nobody does.
+Plot twist: they don't. Nobody does.
 
-Imagine you're learning to cook. You don't need to memorize every recipe. You just need to know the basics: how to chop, how to season, how not to burn the house down. Coding is the same. It's more about understanding patterns than remembering every detail.
+Imagine you're learning to cook. You don't need to memorize every recipe in existence. You just need to know the basics: how to chop an onion without crying (good luck), how to season food, and how not to burn the house down. Coding is the same. It's more about understanding patterns than remembering every single method.
 
-Back in the day, I used to feel bad googling how to get the last item in an array. Like, wasn't I supposed to already know this? But here's the thing: I still google that sometimes. And so do developers who've been doing this way longer than me.
+Back in the day, I used to feel like a fraud googling how to get the last item in an array. Like, wasn't I supposed to already know this?
 
-**Being a good developer isn't about having everything memorized—it's about knowing how to find answers, how to think through problems, and how to stay calm when nothing works.** So if you're googling basic stuff, congrats, you're doing it right.
+```javascript
+// Me, frantically googling "how to get last element array javascript"
+const myArray = [1, 2, 3, 4, 5];
+const lastElement = myArray[myArray.length - 1]; // Finally!
+```
 
----
+But here's the thing: I still google that sometimes. And so do developers who've been doing this way longer than me. The difference is they don't beat themselves up about it.
 
-## 2. 📚 Learn How to Learn
+**Being a good developer isn't about having everything memorized. It's about knowing how to find answers, how to think through problems, and how to stay calm when your code decides to have a temper tantrum.** So if you're googling basic stuff, congratulations, you're doing it exactly right.
 
-Here's a big one that would have saved me years of feeling stuck: **Most beginners try to learn code before they learn how to learn code.**
+## 2. Learn How to Learn
 
-I thought if I just watched enough tutorials, eventually I'd get it. Spoiler alert: 10 tutorials later, I could follow along, but I couldn't build anything on my own. It was like learning to ride a bike by watching YouTube videos. You feel productive right up until you actually try pedaling and crash into a bush.
+Here's a big one that would have saved me years of spinning my wheels: **Most beginners try to learn code before they learn how to learn code.**
 
-Learning to code is like learning a language. You don't become fluent by listening—you become fluent by speaking. Same with coding. **If your fingers aren't on the keyboard, your brain isn't really learning.**
+I thought if I just watched enough tutorials, eventually I'd get it. Spoiler alert: 10 tutorials later, I could follow along perfectly, but I couldn't build anything on my own. It was like learning to ride a bike by watching YouTube videos. You feel super productive right up until you actually try pedaling and face-plant into a bush.
 
-What really changed everything for me was switching from consume mode to create mode. Instead of just watching someone else build an app, I started building my own stuff, even if it was terrible.
+Learning to code is like learning a language. You don't become fluent by just listening to people speak. You become fluent by stumbling through conversations, making mistakes, and slowly getting less terrible at it.
 
-**Here's the rule I wish I had from day one: For every hour you spend watching a tutorial, spend at least 4 hours building without it.** Get stuck, google stuff, break things—that's the real course.
+What really changed everything for me was switching from "consume mode" to "create mode." Instead of just watching someone else build a to-do app for the 47th time, I started building my own stuff, even if it looked like it was designed by a caffeinated squirrel.
 
----
+```javascript
+// My first "original" project (spoiler: it was terrible)
+function addTodo() {
+    const todo = document.getElementById('todoInput').value;
+    if (todo === '') {
+        alert('Please enter a todo!'); // Yes, I used alert()
+        return;
+    }
+    // ... the rest was equally questionable
+}
+```
 
-## 3. ⚡ Perfection is a Trap
+**Here's the rule I wish I had from day one: For every hour you spend watching a tutorial, spend at least 4 hours building without it.** Get stuck, google stuff, break things. That's where the real learning happens.
 
-Okay, confession time. Early in my dev journey, I once spent 3 hours trying to name a variable. Not even kidding. Just staring at the screen like: should I call it `data`, `info`, or maybe `superImportantThingy`?
+## 3. Perfection is a Trap
 
-Why? Because I thought everything I wrote had to be perfect.
+Okay, confession time. Early in my dev journey, I once spent 3 hours trying to name a variable. Not even kidding. Just staring at the screen like a deer in headlights: should I call it `data`, `info`, `userDetails`, or maybe `theThingThatHoldsStuff`?
 
-But here's the problem: **perfection is a lie.** You're never going to write flawless code. Nobody does. Even the senior dev you look up to is pushing code that breaks sometimes. They just know how to fix it faster.
+Why? Because I thought everything I wrote had to be perfect from the get-go.
 
-It's like learning to paint but never putting a brush on canvas because you're scared that the first stroke won't be a masterpiece. Well, it won't be. It's not supposed to be.
+But here's the problem: **perfection is a myth.** You're never going to write flawless code. Nobody does. Even the senior dev you idolize is pushing code that breaks sometimes. They just know how to fix it faster and with fewer curse words.
 
-Once I stopped obsessing over making everything clean or elegant and just started shipping stuff, things changed. Projects got finished. I started learning faster, and guess what? The code got better as a result. Not because I chased perfection, but because I gave myself room to mess up.
+```javascript
+// My perfectionist phase
+const veryDescriptiveAndPerfectlyNamedVariableForUserInformation = getUserData();
 
-**Done is better than perfect.** Ugly code that works will teach you more than beautiful code that never leaves your laptop. So stop polishing, start building.
+// Reality check: this was just fine
+const user = getUserData();
+```
 
----
+It's like learning to paint but never putting a brush on canvas because you're terrified that the first stroke won't be the Mona Lisa. Well, it won't be. It's not supposed to be. Your first stroke is going to look more like a toddler's attempt at abstract art, and that's perfectly fine.
 
-## 4. 🚀 You Will Never Feel Ready. Start Anyway.
+Once I stopped obsessing over making everything pristine and elegant and just started shipping stuff, everything changed. Projects actually got finished. I started learning faster, and you know what? The code got better as a result. Not because I chased perfection, but because I gave myself permission to suck at first.
 
-You're never going to feel ready. Not ready to build your first project. Not ready to apply for that dev job. Not ready to charge money for your work.
+**Done is better than perfect.** Ugly code that works will teach you more than beautiful code that never sees the light of day.
 
-I kept waiting for this magical moment where I would feel like a "real developer." But it never came. Even after years of experience, I'd still think: "Who let me touch production?"
+## 4. You Will Never Feel Ready. Start Anyway.
 
-It's kind of like going to the gym. You don't wait until you're in shape to start working out. You just show up. You start small, you get stronger over time. Same thing with coding. **Confidence is built by doing, not waiting.**
+You're never going to feel ready. Not ready to build your first project. Not ready to apply for that dev job. Not ready to charge money for your work. Not ready to push code on a Friday afternoon (okay, maybe don't do that one).
 
-My first freelance gig, I was terrified. Imposter syndrome on full blast. But I said yes anyway. And for sure, I googled half of it on the fly. But I delivered. And that one "yes" opened doors I didn't even know existed.
+I kept waiting for this magical moment where I would feel like a "real developer." Spoiler alert: it never came. Even after years of experience, I'd still think: "Who decided it was a good idea to let me touch production code?"
 
-**You're more ready than you think. You don't need to feel confident. You just need to be willing.** Start messy. Start scared. Just start.
+It's kind of like going to the gym. You don't wait until you're already in shape to start working out. You just show up, stumble through your first workout, and slowly get less terrible over time. Same thing with coding.
 
----
+My first freelance gig? I was absolutely terrified. Imposter syndrome was screaming at full volume. But I said yes anyway. And sure, I googled probably half of what I needed to do. But I delivered something that worked, and that one "yes" opened doors I didn't even know existed.
 
-## 5. 🔍 The Real Skill is Problem Solving
+```javascript
+// Me on my first day at a real job
+console.log("I have no idea what I'm doing"); // This was actually in my code
+```
 
-Here's something no tutorial thumbnail ever says: **The real skill in coding isn't writing code—it's solving problems.**
+**You're more ready than you think. You don't need to feel confident. You just need to be willing to figure it out as you go.** Start messy. Start scared. Just start.
 
-Anyone can memorize a for loop, but can you break down a feature request into tiny buildable chunks? Can you figure out why something's broken when nothing looks broken?
+## 5. The Real Skill is Problem Solving
 
-Think of coding like being a detective. The syntax? That's just your notebook. But the real magic is in asking the right questions, tracing clues, and piecing things together.
+Here's something no coding bootcamp brochure ever mentions: **The real skill in programming isn't writing code. It's solving problems.**
 
-Early on, I'd freeze every time something didn't work. Like: "It's broken, I must suck." But eventually I realized: **debugging is the job.** It's not the failure, it's the process.
+Anyone can memorize how to write a for loop, but can you break down a complex feature request into bite-sized, manageable pieces? Can you figure out why your code is broken when the error message might as well be written in ancient hieroglyphics?
 
-The devs you admire aren't just fluent in a language. They are relentless problem solvers. They stay curious, they ask questions, they keep digging.
+```javascript
+// The error message
+Uncaught TypeError: Cannot read property 'map' of undefined
 
-**If you want to level up fast, start focusing less on what to write and more on why it's written that way.** Build your thinking muscle, not just your typing speed.
+// What I heard in my head
+"Something is very wrong and you should probably consider a career in farming"
+```
 
----
+Think of coding like being a detective. The syntax? That's just your notebook and magnifying glass. But the real magic is in asking the right questions, following clues, and piecing together the mystery of why your perfectly logical code is acting like a rebellious teenager.
 
-## 6. 🎯 Nobody Cares About Your Code. They Care About What It Does.
+Early on, I'd completely freeze every time something didn't work. Like: "It's broken, therefore I must be terrible at this." But eventually I realized: **debugging IS the job.** It's not the failure, it's literally the process.
 
-This one might hurt a little, but you need to hear it: **Nobody cares about your code.** Not your client, not your boss, not the user. They care about what it does.
+The developers you admire aren't just walking dictionaries of programming languages. They're relentless problem solvers. They stay curious, they ask the right questions, and they keep digging even when the bug seems impossible to find.
 
-You could write the cleanest, most elegant code known to humankind, but if the button doesn't work or the site loads like it's on dial-up, it's useless.
+## 6. Nobody Cares About Your Code. They Care About What It Does.
 
-I remember building this beautifully abstracted component once. I was so proud of it. It was reusable, efficient, DRY (Don't Repeat Yourself). But the client just said: "Cool, can we make the button blue instead of green?"
+This one might sting a little, but you need to hear it: **Nobody cares about your code.** Not your client, not your boss, not the user trying to complete a simple task on your website.
 
-They didn't care about my clever hooks. They just wanted results.
+You could write the cleanest, most elegant, perfectly architected code in the history of software development, but if the login button doesn't work or the site loads slower than dial-up internet, it's completely useless.
 
-**Think of your code like plumbing.** Nobody looks under the sink and claps because your pipes are tidy. They just want the water to run.
+I remember building this beautifully abstracted React component once. I was so proud of it. It was reusable, efficient, followed all the best practices I'd read about.
 
-Write code that works. Write code that solves problems. If it's clean and elegant too, great. But don't lose sleep over the perfect solution no one sees. **Value is better than vanity.**
+```javascript
+// My "masterpiece"
+const SuperCleanAbstractedButton = ({ 
+    onClick, 
+    variant, 
+    size, 
+    disabled, 
+    loading, 
+    children,
+    ...props 
+}) => {
+    // 50 lines of beautiful, over-engineered code
+};
+```
 
----
+But the client just said: "Cool, can we make the button blue instead of green?"
 
-## 7. 🔋 Burnout is Real. Protect Your Energy.
+They didn't care about my clever abstractions or my perfectly organized prop structure. They just wanted results.
 
-Let's get real for a second. **Burnout is real, and it can hit hard.** You start off excited, motivated, watching tutorials at double speed, drinking way too much coffee. Fast forward a few months later, you're exhausted, confused, and wondering if you're even meant for coding.
+**Think of your code like plumbing.** Nobody opens up the wall to admire how neatly your pipes are arranged. They just want the water to come out when they turn the faucet.
 
-Been there. I once spent an entire weekend trying to fix one tiny bug. Didn't eat properly, barely slept, just stared at the screen hoping the code would magically heal itself. When I finally solved it, sure, the bug was gone, but so was my energy. And honestly, that wasn't a win—that was a warning.
+Write code that works. Write code that solves actual problems. If it's clean and elegant too, that's fantastic. But don't lose sleep over crafting the perfect solution that nobody will ever see or appreciate.
 
-This idea that real developers grind 24/7? **Total nonsense.** The best developers I know, the ones who last, they take breaks, they have boundaries, they rest, they go on holidays, they play games.
+## 7. Burnout is Real. Protect Your Energy.
 
-**Think of your brain like a battery.** You wouldn't run your phone at 1% all day. Why do that to yourself?
+Let's get real for a second. **Burnout is real, and it will sneak up on you like a ninja.** You start off excited, motivated, consuming tutorials like they're your favorite Netflix series. Fast forward a few months, and you're exhausted, confused, and wondering if maybe you should have stuck with that accounting degree.
 
-You don't need to hustle every second to prove something. Productivity isn't about burning out. It's about sustainability. Sleep, touch grass, go for a walk—your code will thank you.
+Been there. I once spent an entire weekend trying to fix one tiny bug. Didn't eat properly, barely slept, just stared at my screen hoping the code would magically heal itself through sheer willpower. When I finally solved it (turns out I had a typo in a variable name), sure, the bug was gone, but so was my sanity.
 
----
+```javascript
+// The bug that consumed my weekend
+const usreName = getUser(); // Notice the typo
+// ... 200 lines later
+console.log(userName); // This variable doesn't exist!
+```
 
-## 🎯 Quick Recap: The Essential Truths
+This romanticized idea that real developers grind 24/7? **Complete nonsense.** The best developers I know, the ones who actually last in this industry, they take breaks. They have boundaries. They sleep. They have hobbies that don't involve staring at a screen.
 
-Let's recap fast and real:
+**Think of your brain like a smartphone battery.** You wouldn't run your phone at 1% all day and expect it to perform well. Why do that to yourself?
 
-1. **You don't need to know everything**
-2. **Learn how to learn**
-3. **Perfection is a lie—ship it anyway**
-4. **You will never feel ready—start anyway**
-5. **Coding is problem solving, not just typing**
-6. **Nobody cares how clever your code is, just that it works**
-7. **Burnout is real—protect your brain battery**
+You don't need to hustle every waking moment to prove you're serious about coding. Real productivity isn't about burning out. It's about sustainability. Take walks, get some sunlight, talk to actual humans. Your code will be better for it.
 
-If even one of these hits you today, then this advice did its job.
+## Quick Recap: The Essential Truths
 
-**Which one of these do you wish someone had told you earlier?** The journey is tough, but you're tougher. Keep coding, keep learning, and remember—every expert was once a beginner who refused to give up.
+Let's wrap this up:
+
+1. **You don't need to know everything** (Google is your friend)
+2. **Learn how to learn** (Build more, watch less)
+3. **Perfection is a lie** (Ship it anyway)
+4. **You will never feel ready** (Start anyway)
+5. **Coding is problem solving, not just typing** (Think like a detective)
+6. **Nobody cares how clever your code is, just that it works** (Results over elegance)
+7. **Burnout is real** (Protect your brain battery)
+
+If even one of these resonates with you today, then this advice did its job.
+
+The journey is tough, but you're tougher. Keep coding, keep learning, and remember: every expert was once a beginner who refused to give up. Even when their code looked like it was written by a caffeinated hamster running across a keyboard.
