@@ -10,7 +10,7 @@ author: "Sabieh Ahmed"
 
 **It took me 8+ years to realize what I'll tell you in 8 minutes**
 
-So I've been coding since 2016, and I really wish someone had told me these 10 things before I wasted years figuring them out the hard way. If you're stuck, overwhelmed, or doubting yourself, let me save you 10+ years.
+So I've been coding since 2016, and I wish someone had told me these 7 things before I wasted years figuring them out the hard way. If you're stuck, overwhelmed, or doubting yourself, let me save you 10+ years.
 
 My name is Sabieh, and I've been a professional software engineer for more than 8 years. I've helped beginner developers learn how to code properly and land a job in tech.
 
@@ -20,7 +20,7 @@ My name is Sabieh, and I've been a professional software engineer for more than 
 
 Here's the first thing I wish someone had told me: **You don't need to know everything. Not even close.**
 
-When I started out, I thought real developers had all of JavaScript memorized, like they were just built different. I used to think real developers could just wake up, grab their keyboard from under their pillow, and instantly write perfect JavaScript—like they had the entire language stored in their brain.
+When I started out, I thought real developers had all of JavaScript memorized, as if they were just born with it. I used to think real developers could wake up, grab their keyboard from under their pillow, and instantly write perfect JavaScript, like they had the entire language stored in their brain.
 
 Spoiler: they don't. Nobody does.
 
