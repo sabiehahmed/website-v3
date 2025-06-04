@@ -1,7 +1,7 @@
 ---
 title: "7 Things I Wish Someone Told Me Before I Started Coding"
 date: "2025-05-4"
-featureImage: "/images/blog/coding-advice.jpg"
+featureImage: "/images/blog/coding-advice.png"
 excerpt: "Valuable insights from a decade of coding experience to help beginners avoid common pitfalls."
 author: "Sabieh Ahmed"
 ---
