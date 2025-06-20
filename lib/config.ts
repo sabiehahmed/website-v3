@@ -212,7 +212,7 @@ export const config: Config = {
         title: "Find me on",
         links: [
           { text: "LinkedIn", url: "https://linkedin.com/in/sabiehahmed" },
-          { text: "GitHub", url: "https://github.com/sabieh-ahmed" },
+          { text: "GitHub", url: "https://github.com/sabiehahmed" },
           { text: "Instagram", url: "https://instagram.com/sabiehahmed" },
           { text: "Facebook", url: "https://facebook.com/sabiehahmed" },
           { text: "500px", url: "https://500px.com/p/sabiehahmed?view=photos" },
@@ -279,13 +279,13 @@ export const config: Config = {
     openSource: {
       text: "this site is",
       linkText: "open source",
-      url: "https://github.com/sabieh-ahmed/website-v3",
+      url: "https://github.com/sabiehahmed/website-v3",
     },
     inquiries: {
       text: "if you have questions or inquiries,",
       linkText: "reach out",
       url: "mailto:sabieh.ahmed@gmail.com",
     },
-    lastUpdate: "last update: 18.05.2025",
+    lastUpdate: "last update: 20.06.2025",
   },
 };
