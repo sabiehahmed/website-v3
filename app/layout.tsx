@@ -8,6 +8,7 @@ import Nav from "@/components/nav";
 import {config} from "@/lib/config";
 import ogImage from "./opengraph-image.png";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
     title: config.metadata.title,
@@ -42,6 +43,7 @@ export default async function RootLayout({
         <body
             className={`${GeistSans.variable} ${GeistMono.variable} relative font-sans bg-whiteout selection:text-white  selection:bg-pink-400 dark:bg-zinc-900 text-blackout dark:text-zinc-100`}
         >
+        <Analytics/>
         <ThemeProvider attribute="class">
             <Nav/>
             {children}
