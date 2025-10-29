@@ -219,7 +219,7 @@ export const config: Config = {
         ],
       },
       someOfMyWork: {
-        title: "Some of my work",
+        title: "Clients / Projects",
         projects: [
           {
             name: "drive careem",
